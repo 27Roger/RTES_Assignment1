@@ -10,23 +10,25 @@ void part1();
 void part2();
 void extension();
 
+DigitalOut led1(LED1);
 
 int main() {
 
-  // part 1 of the assignment
-  part1();
+	// part 1 of the assignment
+	part1();
 
-  // part 2 of the assignment
-  part2();
+	// part 2 of the assignment
+	part2();
 
-  // extension component
-  extension();
+	// extension component
+	extension();
 
 
 
-  while(1) {
-    
-  }
+	while(1) {
+		wait_ms(100);
+	}
+
 }
 
 
