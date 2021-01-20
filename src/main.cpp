@@ -1,6 +1,13 @@
+/*
+* Project:    Assignment1
+* File:       main.c
+* Author(s):  Michael Thoreau, Chris Piekarski
+*/
+
 #include <mbed.h>
 
 void part1();
+void part2();
 void extension();
 
 
@@ -8,6 +15,9 @@ int main() {
 
   // part 1 of the assignment
   part1();
+
+  // part 2 of the assignment
+  part2();
 
   // extension component
   extension();
@@ -21,7 +31,11 @@ int main() {
 
 
 void part1() {
-  
+
+}
+
+void part2() {
+
 }
 
 
