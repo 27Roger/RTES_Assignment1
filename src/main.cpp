@@ -5,6 +5,7 @@
 */
 
 #include <mbed.h>
+#include <string.h>
 
 void part1();
 void part1b();
@@ -14,6 +15,12 @@ void extension();
 // define LEDs
 DigitalOut led1(LED1);
 DigitalOut led2(LED1);
+
+string test = "";
+
+// Variables Used for Part 2/Extension
+char secretString[16] = {0x57,0x65,0x6C,0x63,0x6F,0x6D,0x65,0x20,0x74,0x6F,0x20,0x52,0x54,0x45,0x53,0x21};
+
 
 int main() {
 
@@ -79,7 +86,18 @@ void part1b() {
 	}
 }
 
+/*
+*	Part 2 - Use the debugger for this next part of the assignment.
+*	In the variables window, write down the contents of 'secretString'
+*	as processed by the function below. Set an appropriate breakpoint
+*	and utilize 'Step Into' to monitor the changing local variables.
+*/
 void part2() {
+  uint8_t i;
+
+  for(i = 0; i < 16; ++i){
+    test = secretString[i];
+  }
 
 }
 
