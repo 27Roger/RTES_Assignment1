@@ -26,10 +26,10 @@ double result = 1234;
 int main() {
 
 	// part 1 of the assignment
-	//part1();
+	part1();
 
 	// part 1 of the assignment
-	//part1b();
+	part1b();
 
 	// part 2 of the assignment
 	part2();
