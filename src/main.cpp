@@ -38,7 +38,6 @@ DigitalOut led2(LED2);
 uint8_t secretString[16] = {0x21, 0x53, 0x45, 0x54, 0x52, 0x20, 0x6F, 0x74, 0x20, 0x65, 0x6D, 0x6F, 0x63, 0x6C, 0x65, 0x57};
 uint8_t decodedString[16];
 
-double result = 1234;
 
 
 int main() {
@@ -59,7 +58,7 @@ int main() {
 	extension();
 
 
-
+	
 	while(1) {
 		wait_ms(100);
 	}
@@ -164,16 +163,22 @@ void part2() {
 }
 
 /*
-*	Extension - Find the number
-*	that corresponds to the letter (a=1, b=2, ... , y=25, z=26) and input
-*	the number in the below function for the 'key' variable. Set an 
-*	appropriate breakpoint and report the value of the 'result' variable.
+*	Extension - Decoding the message and printing to terminal.
 *
-* 	*Hint* - When setting a breakpoint, respect that result is a global variable.
+*	You are an agent working for the CIA and have intercepted a message from a person of interest.
+*	{0x49,0x20,0x6C,0x6F,0x76,0xFF,0x20,0x70,0xEE,0x7A,0x7A,0xFE,0x2E}
+*
+*	But there is an issue, the message was compromised during transmission. Your task below is to
+*	write a function that prints out the full message to the terminal.
+*	After seeing the message printed, give your best guess to what the message says and write your answer
+*	below in decoded_message and print this result as well.
+*
+*	See http://www.asciitable.com/ and https://www.cplusplus.com/reference/cstdio/printf/ for details on converting ASCII to hex.
+*	
 */
+uint8_t message[13] = {0x49,0x20,0x6C,0x6F,0x76,0xFF,0x20,0x70,0xEE,0x7A,0x7A,0xFE,0x2E};
+uint8_t decoded_message[13] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+
 void extension () {
-	int f = 380489;
-	int key = 0;
-	result = fmod(f,key);
 
 }
