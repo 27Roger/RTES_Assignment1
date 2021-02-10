@@ -2,7 +2,7 @@
 
 The stm32 discovery board has a second USB port which we can use to communicate to a host PC via USBSerial. The second cable required is a micro-USB cable and should be plugged in as shown below:
 
-![USBSerial Connection](imgs/board.jpeg)
+![USBSerial Connection](imgs/board.jpg)
 
 <br />
 
