@@ -7,7 +7,6 @@
 #include <mbed.h>
 #include <string.h>
 
-
 /* 	Include for printing via the micro USB port
 *	This requires you have the latest st-link driver:
 *   https://www.st.com/en/development-tools/stsw-link009.html
@@ -15,51 +14,44 @@
 */
 #include <USBSerial.h>
 
-// Important!  -  comment out this line if the debugger gets stuck here
-USBSerial serial;
-
-
+USBSerial *serial;
 
 // Function Prototypes
-void part1();
+void part1a();
 void part1b();
 void part1c();
 void part2();
 void extension();
 
-
 // Define LEDs
 DigitalOut led1(LED1);
 DigitalOut led2(LED2);
 
-
-
-// Variables Used for Part 2/Extension
+// Variables Used for Part 2
 uint8_t secretString[16] = {0x21, 0x53, 0x45, 0x54, 0x52, 0x20, 0x6F, 0x74, 0x20, 0x65, 0x6D, 0x6F, 0x63, 0x6C, 0x65, 0x57};
 uint8_t decodedString[16];
 
 
 
+/* main function for Assignment 1 - comment out parts you aren't currently working on */
 int main() {
 
-	// part 1  - blinky
-	part1();
+	while (1) {
+		// part 1  - blinky
+		part1a();
 
-	// part 1b - blinky 2
-	part1b();
+		// part 1b - blinky 2
+		part1b();
 
-	// part 1c - printing over serial
-	part1c();
-	
-	// part 2  - debugging
-	part2();
+		// part 1c - printing over serial
+		part1c();
+		
+		// part 2  - debugging
+		part2();
 
-	// extension component
-	extension();
+		// extension component
+		extension();
 
-
-	
-	while(1) {
 		wait_ms(100);
 	}
 
@@ -70,12 +62,12 @@ int main() {
 *	Part 1 - objective: Upload basic code to the board,
 *	blink an LED
 */
-void part1() {
+void part1a() {
 	uint8_t i;
 	uint8_t ledVar = 0;
 
-	// blink 20 times
-	for(i = 0; i < 40; i++) {
+	// blink 10 times
+	for(i = 0; i < 20; i++) {
 		
 		// toggle variable
 		ledVar = ~ledVar;
@@ -115,38 +107,45 @@ void part1b() {
 *  Try a few more here, what else can you print?
 */
 void part1c() {
+	
+	// Important!  -  comment out this line if the debugger gets stuck here
+	// see FAQ
+	if (serial != NULL) {
+		serial = new USBSerial();
+	}
+
 	uint8_t anInt = 33;
 	float aFloat = 33.033;
 
 	// hello world
-	serial.printf("Hello World!\n\r");
+	serial->printf("Hello World!\n\r");
 	
 	// print an integer - with a few format options
-	serial.printf("An integer: %d\n\r", anInt);
-	serial.printf("An integer: %03d\n\r", anInt);
-	serial.printf("An integer: %07d\n\r", anInt);
+	serial->printf("An integer: %d\n\r", anInt);
+	serial->printf("An integer: %03d\n\r", anInt);
+	serial->printf("An integer: %07d\n\r", anInt);
 
-	// print a float - different levels of precision
-	serial.printf("An integer: %f\n\r", aFloat);
-	serial.printf("An integer: %.2f\n\r", aFloat);
-	serial.printf("An integer: %05.5f\n\r", aFloat);
+	// print a float - different levels of precision and padding
+	serial->printf("A float: %f\n\r", aFloat);
+	serial->printf("A float: %.2f\n\r", aFloat);
+	serial->printf("A float: %09.4f\n\r", aFloat);
 
 	// see more formatting here:
 	// https://alvinalexander.com/programming/printf-format-cheat-sheet/
 
 
-	// your task - print me!
+	// your task - print me in the format: 0x00001234
 	uint16_t hexLiteral = 0x1234;
 
 }
 
 
 /*
-*	Part 2 - Use the debugger for this next part of the assignment.
+*	Part 2 - Use the debugger for this next part of the assignment (do not modify code).
 *	From the variables window, write down the contents of 'secretString'
 *	as it is decoded by the function below. Set an appropriate breakpoint
-*	and utilize 'Step Into' to monitor the changing local variables.
-* 	Write a comment to show that you decoded the string!
+*	and utilize 'Step Over' to monitor the changing local variables.
+* 	Write a comment containing the decoded string!
 */
 void part2() {
 	uint8_t i;
