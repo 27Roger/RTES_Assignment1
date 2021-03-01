@@ -18,7 +18,7 @@ The assignment will be graded according to the following:
 | Extension   | 20%         |
 
 
-###Instructions
+### Instructions
 
 Create a new project in platformIO as demonstrated in class. Copy the code from main.c in this repository to your main.c file and modify to complete each part.
 
