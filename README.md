@@ -5,8 +5,9 @@
 
 The purpose of this assignment is to get you comfortable with the development environment as well as the basics of microcontroller programming and debugging. 
 
-All questions should be answered in the c file attached; Add comments and code to the file where required and submit your main.c file as Assignment1_ident.c on NYU classes.
+All questions should be answered by modifying the main.c file; Add comments and code to the file where required and rename your main.c file as Assignment1_ident.c  before submitting on NYU classes.
 
+The assignment will be graded according to the following:
 
 | Part        | Grade       |
 | ------------| ----------- |
