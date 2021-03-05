@@ -5,8 +5,9 @@
 
 The purpose of this assignment is to get you comfortable with the development environment as well as the basics of microcontroller programming and debugging. 
 
-All questions should be answered in the c file attached; Add comments and code to the file where required and submit your main.c file as Assignment1_ident.c on NYU classes.
+All questions should be answered by modifying the main.c file; Add comments and code to the file where required and rename your main.c file as Assignment1_ident.c  before submitting on NYU classes.
 
+The assignment will be graded according to the following:
 
 | Part        | Grade       |
 | ------------| ----------- |
@@ -15,6 +16,12 @@ All questions should be answered in the c file attached; Add comments and code t
 | 1c          | 10%         |
 | 2           | 10%         |
 | Extension   | 20%         |
+
+
+### Instructions
+
+Create a new project in platformIO as demonstrated in class. Copy the code from main.c in this repository to your main.c file and modify to complete each part.
+
 
 <br />
 
