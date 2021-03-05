@@ -41,7 +41,7 @@ This is caused by a firmware bug in the st-link controller on the board. Follow 
 
 **I'm not seeing any data from printf()?**
 
-Make sure to follow all the instructions [here](tutorials/firmware.md).
+Make sure to follow all the instructions [here](tutorials/USBSerial.md).
 
 <br />
 

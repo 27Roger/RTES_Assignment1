@@ -110,7 +110,7 @@ void part1c() {
 	
 	// Important!  -  comment out this line if the debugger gets stuck here
 	// see FAQ
-	if (serial != NULL) {
+	if (serial == NULL) {
 		serial = new USBSerial();
 	}
 
