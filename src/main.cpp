@@ -27,13 +27,17 @@ int main() {
 		
 		part1();
 
+		part2();
+
+		part3();
+
 		wait_ms(100);
 	}
 
 }
 
 
-/*
+/*	Adding and Subtracting
 *	Part 1 - objective: Modify the assembly program asm_hw to 
 *	return the subtraction of two integers.
 */
@@ -44,12 +48,22 @@ void part1() {
 
 }
 
-/*
+/*	Blinking an LED
 *	Part 2 - objective: Modify the assembly function asm_led so it will
 *	flip an integer between 0 and 1. Use the result to blink an LED.
 */
 
 void part2() {
+
+	}
+
+
+/*	Assembly LED Error
+*	Part 3 - objective: Write a new assembly function asm_error and declare it appropriately in the extern functions list above.
+*	You will pass in two integers into the function and add them. If there is an overflow flag, turn on the red LED.
+*/
+
+void part3() {
 
 	}
 
