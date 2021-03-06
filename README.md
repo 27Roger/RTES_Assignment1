@@ -1,9 +1,9 @@
 # Real Time Embedded Systems
-### Programming Assignment 1 - Introduction
+### Programming Assignment 2 - Assembly
 
 <br />
 
-The purpose of this assignment is to get you comfortable with the development environment as well as the basics of microcontroller programming and debugging. 
+The purpose of this assignment is to take a deep dive into how abstract code we write is interpreted by the compiler. You will get hands on with writing regular programming and interfacing it directly into the assembly language. 
 
 All questions should be answered by modifying the main.c file; Add comments and code to the file where required and rename your main.c file as Assignment1_ident.c  before submitting on NYU classes.
 
@@ -11,11 +11,11 @@ The assignment will be graded according to the following:
 
 | Part        | Grade       |
 | ------------| ----------- |
-| 1a          | 50%         |
-| 1b          | 10%         |
-| 1c          | 10%         |
-| 2           | 10%         |
-| Extension   | 20%         |
+| 1           | 50%         |
+| x           | 10%         |
+| x           | 10%         |
+| x           | 10%         |
+| x           | 20%         |
 
 
 ### Instructions
