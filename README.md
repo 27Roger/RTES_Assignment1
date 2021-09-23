@@ -20,7 +20,7 @@ The assignment will be graded according to the following:
 
 ### Instructions
 
-Create a new project in platformIO as demonstrated in class. Copy the code from main.c in this repository to your main.c file and modify to complete each part.
+Create a new project in platformIO as demonstrated in class. Copy the code from main.c in this repository to your main.c file and modify to complete each part. You also need to copy mbed_app.json from the git repository to the top level of your project (next to platformio.ini) this allows us to print floats!
 
 
 <br />
