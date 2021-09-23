@@ -5,7 +5,7 @@
 
 The purpose of this assignment is to get you comfortable with the development environment as well as the basics of microcontroller programming and debugging. 
 
-All questions should be answered by modifying the main.c file; Add comments and code to the file where required and rename your main.c file as Assignment1_ident.c  before submitting on NYU classes.
+All questions should be answered by modifying the main.c file; Add comments and code to the file where required and rename your main.c file as Assignment1_<nyuid>.c  before submitting on NYU classes.
 
 The assignment will be graded according to the following:
 
@@ -32,7 +32,7 @@ Create a new project in platformIO as demonstrated in class. Copy the code from 
 
 **FAQ**
 
-**My code gets stuck at:**   `serial = new USBSerial()`
+**Old Board: My code gets stuck at:**   `serial = new USBSerial()`
 
 You have to plug in a second usb cable to use the USBSerial interface. See these [Instructions](tutorials/USBSerial.md).
 
@@ -40,13 +40,13 @@ You have to plug in a second usb cable to use the USBSerial interface. See these
 <br />
 
 
-**My code no longer appears to run when connected to an external power source?**
+**Old Board: My code no longer appears to run when connected to an external power source?**
 
 This is caused by a firmware bug in the st-link controller on the board. Follow these [Instructions on Updating the Firmware](tutorials/firmware.md) on your board.
 
 <br />
 
-**I'm not seeing any data from printf()?**
+**Old Board: I'm not seeing any data from printf()?**
 
 Make sure to follow all the instructions [here](tutorials/USBSerial.md).
 
