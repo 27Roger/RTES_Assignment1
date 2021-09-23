@@ -7,14 +7,6 @@
 #include <mbed.h>
 #include <string.h>
 
-/* 	Include for printing via the micro USB port
-*	This requires you have the latest st-link driver:
-*   https://www.st.com/en/development-tools/stsw-link009.html
-*	See a TA for help if you cannot print via this method - and remove the following lines
-*/
-#include <USBSerial.h>
-
-USBSerial *serial;
 
 // Function Prototypes
 void part1a();
@@ -31,7 +23,9 @@ DigitalOut led2(LED2);
 uint8_t secretString[16] = {0x21, 0x53, 0x45, 0x54, 0x52, 0x20, 0x6F, 0x74, 0x20, 0x65, 0x6D, 0x6F, 0x63, 0x6C, 0x65, 0x57};
 uint8_t decodedString[16];
 
-
+void wait_ms(uint32_t ms) {
+  wait_us(1000*ms);
+}
 
 /* main function for Assignment 1 - comment out parts you aren't currently working on */
 int main() {
@@ -43,8 +37,8 @@ int main() {
 		// part 1b - blinky 2
 		part1b();
 
-		// part 1c - printing over serial
-		part1c();
+		// part 1c - printing over serial - skip for OLD BOARD
+		part1c(); 
 		
 		// part 2  - debugging
 		part2();
@@ -101,34 +95,35 @@ void part1b() {
 }
 
 
+
+
 /* Here we want to go through some basic printing to terminal.
 *  See the top of the file if you have issues printing over USBSerial
 *  Write a line to print in hex the literal below
 *  Try a few more here, what else can you print?
 */
 void part1c() {
-	
-	// Important!  -  comment out this line if the debugger gets stuck here
-	// see FAQ
-	if (serial == NULL) {
-		serial = new USBSerial();
-	}
+	// IF you have the older board - you may skip this part 
+  //    - please say why you are skipping below
 
 	uint8_t anInt = 33;
 	float aFloat = 33.033;
 
 	// hello world
-	serial->printf("Hello World!\n\r");
+	printf("Hello World!\n\r");
 	
 	// print an integer - with a few format options
-	serial->printf("An integer: %d\n\r", anInt);
-	serial->printf("An integer: %03d\n\r", anInt);
-	serial->printf("An integer: %07d\n\r", anInt);
+	printf("An integer: %d\n\r", anInt);
+	printf("An integer: %03d\n\r", anInt);
+	printf("An integer: %07d\n\r", anInt);
 
 	// print a float - different levels of precision and padding
-	serial->printf("A float: %f\n\r", aFloat);
-	serial->printf("A float: %.2f\n\r", aFloat);
-	serial->printf("A float: %09.4f\n\r", aFloat);
+	printf("A float: %f\n\r", aFloat);
+	printf("A float: %.2f\n\r", aFloat);
+	printf("A float: %09.4f\n\r", aFloat);
+
+  // If the float printing above doesn't work, please add the 
+  // mbed_app.json file to the top level directory (next to platformio.ini)
 
 	// see more formatting here:
 	// https://alvinalexander.com/programming/printf-format-cheat-sheet/
